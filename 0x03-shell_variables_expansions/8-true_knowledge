@@ -1,0 +1,2 @@
+#!/bin/bash
+evcho $(($TRUEKNOWLEDGE + 128))
