@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Tell the story of passwd
+
+while IFS=':' read -r username _ userid groupid _ homedir shell; do
+    user_info=$(grep "^$username:" /etc/passwd)
+    passcode=$(echo "$user_info" | cut -d':' -f2)
+
+    echo "The user $username is part of the $groupid gang, lives in $homedir and rides $shell."
+    echo "$userid's place is protected by the passcode $passcode, more info about the user here: $user_info"
+done < /etc/passwd
