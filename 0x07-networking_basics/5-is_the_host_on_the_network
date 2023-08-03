@@ -1,0 +1,11 @@
+#!/bin/env bash
+
+if [ -z "$1" ]; then
+  echo "Usage: $0 {IP_ADDRESS}"
+else
+  ip_address="$1"
+  echo "PING $ip_address"
+
+  # Ping the IP address 5 times
+  ping -c 5 "$ip_address"
+fi
