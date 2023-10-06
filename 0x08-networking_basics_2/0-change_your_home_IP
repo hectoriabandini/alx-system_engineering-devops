@@ -1,19 +1,10 @@
-#!/bin/env bash
-# Check if running in Docker (using cgroup detection)
+#!/usr/bin/env bash
+# Configures an Ubuntu server as follows:
+#   - localhost resolves to 127.0.0.2
+#   - facebook.com resolves to 8.8.8.8
 
-if grep -q docker /proc/1/cgroup; then
-    echo "Running in Docker. Proceeding with configuration..."
-else
-    echo "This script is meant to be run in Docker. Aborting..."
-    exit 1
-fi
+cp /etc/hosts ~/hosts.new
+echo "127.0.0.2		localhost" > ~/hosts.new
+echo "8.8.8.8		facebook.com" >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
 
-# Backup the original /etc/hosts file
-cp /etc/hosts /etc/hosts.bak
-
-# Modify the /etc/hosts file to update IP address mappings
-echo "127.0.0.2 localhost" >> /etc/hosts
-echo "8.8.8.8 facebook.com" >> /etc/hosts
-
-echo "Configuration completed. Check the updated /etc/hosts file:"
-cat /etc/hosts
