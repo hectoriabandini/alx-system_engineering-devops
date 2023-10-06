@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # a Bash script that displays listening ports
-
 echo "Active Internet connections (only servers)"
 echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
 
-# Get listening sockets information using the 'ss' command
+# Get listening sockets information using theZZ 'ss' command
 # '-l' option shows only listening sockets
 # '-t' option shows TCP sockets
 # '-p' option shows process information
