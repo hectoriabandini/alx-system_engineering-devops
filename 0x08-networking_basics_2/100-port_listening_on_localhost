@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-# Displays all acive IPv4 addresses on the machine.
+#!/bin/bash
 
-ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | cut -b 11-
+# Start listening on port 98
+nc -l -p 98 -k
 
