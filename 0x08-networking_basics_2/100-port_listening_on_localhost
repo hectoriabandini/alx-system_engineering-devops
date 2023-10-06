@@ -1,5 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Listens on port 98 on localhost.
 
-# Start listening on port 98
-nc -l -p 98 -k
+nc -l localhost 98
 
