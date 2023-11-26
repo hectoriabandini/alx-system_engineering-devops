@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Set the server IP address
+server_ip="8.8.8.8"
+
+# Use ssh with the private key and connect as the user 'ubuntu'
+ssh -i ~/.ssh/school ubuntu@$server_ip
