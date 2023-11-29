@@ -1,4 +1,4 @@
-#!/bin/envbash
+#!/usr/bin/env bash
 
 # Set the server IP address
 server_ip="8.8.8.8"
