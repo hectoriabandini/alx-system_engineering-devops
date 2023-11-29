@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 # Set the key file name
 key_file="school"
