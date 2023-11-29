@@ -28,6 +28,3 @@ printf %s "server {
 
 # Restarts the Nginx service to apply the configuration changes.
 service nginx restart
-
-
-3-redirection
