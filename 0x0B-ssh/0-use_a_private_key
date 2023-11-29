@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set the server IP address
-server_ip="8.8.8.8"
+#server_ip=
 
 # Use ssh with the private key and connect as the user 'ubuntu'
-ssh -i /root/.ssh/id_rsa ubunt@100.26.224.56
+ssh -i /root/.ssh/school ubunt@18.204.7.191
