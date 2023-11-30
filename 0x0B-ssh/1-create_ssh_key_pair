@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 # Set the key file name
-key_file="school"
+key_file="/root/.ssh/school"
 
 # Set the number of bits for the key
 bits=4096
